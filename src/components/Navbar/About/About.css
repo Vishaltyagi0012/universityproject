@@ -1,0 +1,150 @@
+.about {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+}
+
+.aboutfirst {
+    height: 100vh;
+    width: 50%;
+
+    display: flex;
+}
+
+.left {
+    height: 100vh;
+    width: 270px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.leftbox {
+    height: 400px;
+    width: 250px;
+    background-image: url(/src/assets/image1.png);
+    background-size: contain;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 50px;
+}
+
+.leftbutton {
+    height: 120px;
+    width: 250px;
+    background-color: rgb(255, 166, 0);
+    margin-top: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+
+}
+
+.brainstorming {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+
+.brainstorming img {
+    height: 70px;
+
+}
+
+.text p {
+    color: white;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.aboutsecond {
+    height: 100vh;
+    width: 50%;
+}
+
+.right {
+    margin-top: 50px;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 2px dotted rgb(255, 166, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightbox {
+    height: 300px;
+    width: 250px;
+
+    margin-top: 10px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-image: url(/src//assets/image3.jpg);
+    background-size: cover;
+}
+
+.img2 {
+    height: 200px;
+    width: 200px;
+    border: none;
+    border-radius: 50%;
+    background-image: url(/src//assets/images2.png);
+    background-size: cover;
+}
+
+.aboutthird {
+    height: 100vh;
+    width: 40%;
+    margin-top: 100px;
+
+}
+
+.book1 {
+    display: flex;
+    color: rgb(255, 166, 0);
+}
+
+.aboutthird h1 {
+    font-size: 50px;
+}
+
+.aboutthird span {
+    color: rgb(255, 166, 0);
+}
+
+.para p {
+    opacity: 0.75;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.service {
+    height: 70px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.imgservice img {
+    height: 60px;
+}
+
+.para1 p {
+    opacity: 0.75;
+    margin-top: 20px;
+    font-size: 20px;
+}
