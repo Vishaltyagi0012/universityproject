@@ -1,0 +1,21 @@
+.academicsh1 {
+    height: 500px;
+    width: 100%;
+    background-image: url(/src/assets/image9.jpg);
+
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.academicsh1 h1 {
+    font-size: 100px;
+    color: white;
+}
+
+.footer1 {
+    margin-top: 0px;
+}
