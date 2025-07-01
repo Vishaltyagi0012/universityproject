@@ -1,0 +1,87 @@
+.form1 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(26, 168, 187);
+}
+
+.contactright1 {
+    height: 100vh;
+    width: 46%;
+    border-radius: 10px;
+
+
+}
+
+.boader {
+    height: 500px;
+    width: 350px;
+    border: 1px solid rgb(7, 7, 7);
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 140px;
+}
+
+.log {
+    margin-left: 130px;
+    font-size: xx-large;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactright1 input {
+    height: 50px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgb(174, 168, 168);
+}
+
+
+
+
+.contactright1 button {
+    height: 50px;
+    width: 300px;
+    background-color: rgb(60, 142, 236);
+    color: white;
+    font-size: 15px;
+    border: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+
+.forgot {
+    margin-top: 70px;
+    margin-left: 100px;
+    font-size: large;
+    color: rgb(129, 123, 123);
+    align-items: center;
+    justify-content: center;
+}
+
+.forgot span {
+    color: rgb(0, 183, 255);
+}
+
+.sign {
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: large;
+    color: rgb(129, 123, 123);
+    align-items: center;
+    justify-content: center;
+}
+
+.sign span {
+    color: rgb(0, 183, 255);
+}

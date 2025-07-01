@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar.jsx";
 import "../Contact/Contact.css";
 import Footer from "../Footer/Footer.jsx"
 import image11 from "../../assets/image11.jpg"
+import { Link, useNavigate } from 'react-router-dom';
 
 const Contact = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [city, setCity] = useState("");
+    const [subject, setSubject] = useState("");
+    const [address, setAddress] = useState("");
+
+    const collectData = async () => {
+        console.warn(name, email, city, subject, address);
+        let result = await fetch('http://localhost:5000/contact', {
+            method: 'POST',
+            body: JSON.stringify({ name, email, city, subject, address }),
+            headers: {
+                'content-type': 'application/json'
+            },
+        })
+        result = await result.json()
+        console.warn(result);
+        localStorage.setItem("user", JSON.stringify(result));
+    }
     return (
         <>
             <Navbar />
@@ -49,11 +69,12 @@ const Contact = () => {
                     <h1>Get in Touch</h1>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
                     <form>
-                        <input placeholder="Enter name" />
-                        <input placeholder="Enter Email" />
-                        <input placeholder="subject" />
-                        <textarea rows={5} cols={35} placeholder="Message"></textarea>
-                        <button>Send Message</button>
+                        <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" />
+                        <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+                        <input value={city} onChange={(e) => setCity(e.target.value)} placeholder="City" />
+                        <input value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="subject" />
+                        <textarea rows={5} cols={35} value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Address"></textarea>
+                        <Link to="/send"><button onClick={collectData}>Send Message</button></Link>
                     </form>
                 </div>
             </div>

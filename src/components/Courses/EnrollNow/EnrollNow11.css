@@ -1,5 +1,5 @@
 .enrollnow1 {
-    height: 140vh;
+    height: 100vh;
     width: 100%;
     padding: 20px;
 
@@ -103,7 +103,7 @@
 }
 
 .coursefeature {
-    height: 260px;
+    height: 230px;
     width: 160%;
     margin-top: 50px;
     margin-left: 5px;
@@ -130,7 +130,7 @@
 }
 
 .coursefeature button {
-    height: 10px;
+    height: 50px;
     width: 500px;
     border: none;
     background-color: rgb(255, 166, 0);

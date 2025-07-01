@@ -21,6 +21,7 @@ const HeroSection = () => {
                 <div className='buttons'>
                     <button>ABOUT MORE &nbsp;&nbsp;<i className="fa-solid fa-arrow-right"></i></button>
                     &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;
+
                     <button>LEARN MORE &nbsp;&nbsp;<i className="fa-solid fa-arrow-right"></i></button>
                 </div>
 

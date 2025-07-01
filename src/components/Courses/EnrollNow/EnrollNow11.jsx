@@ -1,25 +1,24 @@
 import React from "react";
-import "../../Courses/EnrollNow/EnrollNow.css";
+import "../../Courses/EnrollNow/EnrollNow11.css";
 import Navbar from "../../Navbar/Navbar";
 import { Link } from 'react-router-dom';
 
 
+const EnrollNow11 = () => {
 
-
-const EnrollNow = () => {
     const EnrollNow = [
         {
-            title: "Web Development Basics",
-            date: "July 1,2025",
-            duration: "8 weeks",
-            seats: 26,
+            title: "Introduction Data Science",
+            date: "August 10,2025",
+            duration: "5 weeks",
+            seats: 35,
         }
-
     ];
     return (
         <>
             <Navbar />
             <div className="enrollnow1">
+
                 <div className="enrollnow2" >
                     {
                         EnrollNow.map((EnrollNow, index) => (
@@ -52,20 +51,21 @@ const EnrollNow = () => {
                                         <div className="coursefeature">
                                             <h2>Course Features</h2>
                                             <p>Language:<span>English</span></p>
-                                            <p>Duration:<span>8 weeks</span></p>
+                                            <p>Duration:<span>4 weeks</span></p>
                                             <p>Location:<span>On-Campus</span></p>
-                                            <Link to="/enrollnow1"><button>Enroll Now</button></Link>
+                                            <Link to="/enrollnow2"><button>Enroll Now</button></Link>
                                         </div>
                                     </div>
-                                </div >
+                                </div>
                             </>
                         ))
                     }
                 </div>
-            </div >
+            </div>
 
         </>
-
     )
 }
-export default EnrollNow
+
+
+export default EnrollNow11

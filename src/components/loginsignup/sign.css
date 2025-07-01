@@ -1,0 +1,80 @@
+.form2 {
+    height: 115vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(26, 168, 187);
+}
+
+.contactright2 {
+    height: 100vh;
+    width: 46%;
+    border-radius: 10px;
+
+
+}
+
+.boader2 {
+    height: 550px;
+    width: 350px;
+    border: 1px solid rgb(7, 7, 7);
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+
+.log {
+    margin-left: 130px;
+    font-size: xx-large;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactright2 input {
+    height: 50px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgb(174, 168, 168);
+}
+
+
+
+
+.contactright2 button {
+    height: 50px;
+    width: 139px;
+    background-color: rgb(60, 142, 236);
+    color: white;
+    font-size: 15px;
+    border: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.or {
+    margin-top: 25px;
+    margin-left: 50px;
+    color: rgb(129, 123, 123);
+}
+
+.con {
+    height: 50px;
+    width: 300px;
+    margin-left: 20px;
+    display: flex;
+}
+
+.con i {
+    color: rgb(253, 220, 69);
+    font-size: xx-large;
+    margin-top: 25px;
+    margin-left: 30px;
+}
