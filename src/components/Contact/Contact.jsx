@@ -18,12 +18,14 @@ const Contact = () => {
             method: 'POST',
             body: JSON.stringify({ name, email, city, subject, address }),
             headers: {
+                // 'content-type': 'application/json',
                 authorization: JSON.parse(localStorage.getItem('token'))
             },
         })
         result = await result.json()
         console.warn(result);
         localStorage.setItem("user", JSON.stringify(result));
+
 
     }
     return (

@@ -25,7 +25,7 @@ const sign = () => {
                 'content-type': 'application/json'
             },
         })
-        result = await result.json()
+        result = await result.json();
         console.warn(result);
         localStorage.setItem("user", JSON.stringify(result.result));
         localStorage.setItem("token", JSON.stringify(result.auth));
