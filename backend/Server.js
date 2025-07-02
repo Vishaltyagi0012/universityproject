@@ -50,10 +50,35 @@ app.post("/login", async (req, resp) => {
     }
 })
 
-app.post("/contact", async (req, resp) => {
+app.post("/contact", verifyToken, async (req, resp) => {
     let contacts = new contact(req.body);
     let result = await contacts.save();
-    resp.send(result)
+
+    Jwt.sign({ result }, jwtkey, { expiresIn: "2h" }, (err, token) => {
+        if (err) {
+            resp.send({ result: 'something went wrong, Please try after sometime' })
+        }
+        resp.send({ result, auth: token })
+    })
 })
 
+function verifyToken(req, resp, next) {
+    let token = req.headers['authorization'];
+    if (token) {
+        token = token.split('')[1];
+
+        Jwt.verify(token, jwtkey, (err, valid) => {
+            if (err) {
+                resp.send({ result: "Please provide valid token " })
+            } else {
+                next();
+            }
+        })
+
+    } else {
+        resp.send({ result: "Please add token with header" })
+    }
+
+
+}
 app.listen(5000);
