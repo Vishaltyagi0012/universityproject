@@ -29,7 +29,7 @@ const Navbar = () => {
                     {/* <li><Link to="/login">Login</Link></li>
                     <li>{auth ? <Link onClick={logout} to="/sign">Logout</Link> : <Link to="/sign ">Sign up</Link>}</li> */}
                     {
-                        auth ? <li><Link onClick={logout} to="/">Logout {JSON.parse(auth).name}</Link></li>
+                        auth ? <li><Link onClick={logout} to="/">Logout </Link></li>
                             : <><li><Link to="/sign ">Sign up</Link></li>
                                 <li><Link to="/login">Login</Link></li></>
                     }
