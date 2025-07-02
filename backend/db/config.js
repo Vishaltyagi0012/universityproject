@@ -7,5 +7,3 @@ mongoose.connect("mongodb://localhost:27017/university");
 
 
 //export default config
-
-// code 
