@@ -11,7 +11,7 @@ const login = () => {
     //     if (auth) {
     //         navigate('/')
     //     }
-    // })
+    // }, [])
 
     const handleLogin = async () => {
         console.log(email, password)
@@ -24,11 +24,12 @@ const login = () => {
         });
         result = await result.json();
         console.warn(result);
-        if (result.name) {
-            localStorage.setItem("user", JSON.stringify(result));
+        if (result.auth) {
+            localStorage.setItem("user", JSON.stringify(result.user));
+            localStorage.setItem("token", JSON.stringify(result.auth));
             navigate("/")
         } else {
-            alert("please  enter correct details. You are not signup ,please sign up")
+            alert("please  enter correct details.")
 
         }
     }
