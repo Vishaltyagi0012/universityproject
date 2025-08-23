@@ -14,7 +14,7 @@ const sign = () => {
         if (auth) {
             navigate('/')
         }
-    })
+    }, []);
 
     const collectData = async () => {
         console.warn(name, email, password);
@@ -23,6 +23,7 @@ const sign = () => {
             body: JSON.stringify({ name, email, password }),
             headers: {
                 'content-type': 'application/json'
+                 
             },
         })
         result = await result.json();
