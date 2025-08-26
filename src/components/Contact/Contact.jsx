@@ -21,7 +21,7 @@ const Contact = () => {
             body: JSON.stringify({ name, email, city, subject, address }),
             headers: {
                 'content-type': 'application/json',
-                authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
+                authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`,
             },
         })
         result = await result.json()

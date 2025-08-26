@@ -1,7 +1,7 @@
 
 import React  from 'react';
 import "../../components/layouts/Admin-Layout.css";
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, Navigate } from 'react-router-dom';
 import { LiaUserSolid } from "react-icons/lia";
 import { RiContactsBook3Fill } from "react-icons/ri";
 import { MdSubject } from "react-icons/md";
@@ -9,7 +9,19 @@ import { IoMdHome } from "react-icons/io";
 
 
 const AdminLayout = () => {
-  
+  const storedUser = localStorage.getItem('user');
+  let user = null;
+  try {
+    user = storedUser ? JSON.parse(storedUser) : null;
+  } catch (error) {
+    user = null;
+    console.error('Error parsing user from localStorage', error);
+  }
+
+  if (!user || user.role !== 1) {
+    return <Navigate to="/" />;
+  }
+
   return (
     <>
       <header>

@@ -4,7 +4,7 @@ import Home from '../../../components/Navbar/home/Home';
 const login1 = () => {
     return (
         <>
-
+            
         </>
     )
 }
