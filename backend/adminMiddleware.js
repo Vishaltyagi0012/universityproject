@@ -1,13 +1,15 @@
-const adminMiddleware = async (req, res, next) => {
+const adminMiddleware = (req, res, next) => {
   try {
-    console.log(req.body);
-    if (req.user && req.user.role === 1) {
-      next(); 
+    const role = req.headers['x-user-role'];
+
+    // Check if the header exists and equals '1' (string, as headers are strings)
+    if (role && role === '1') {
+      return next();
     } else {
-      res.status(403).json({msg: 'Access denied, admin only'});
+      return res.status(403).json({ msg: 'Access denied, admin only' });
     }
   } catch (error) {
-    next(error);
+    return next(error);
   }
 };
 

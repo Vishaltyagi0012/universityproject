@@ -7,20 +7,27 @@ import "../../components/layouts/AdminCommon.css";
 const AdminUsers = () => {
   
   const[users, setUsers] = useState([]);
+  const [isLoading, setIsLoading]= useState(true);
 
   const getAllUsersData = async()=>{
     try {
+      setIsLoading(true);
+        const user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
         const response = await fetch("http://localhost:5000/users",{
           method:"GET",
           headers:{
-             'content-type': 'application/json'
+             'content-type': 'application/json',
+             'x-user-role': user ? String(user.role) : ''
           },
         });
         const data = await response.json();
         console.log(data);
       if (response.ok) {
-        setUsers(data.users);    
-      } 
+        setUsers(data.users); 
+        setIsLoading(false);   
+      } else{
+        setIsLoading(false);
+      }
     } catch (error) {
         console.log(error);
     }
@@ -29,10 +36,12 @@ const AdminUsers = () => {
   // delete he user
   const deleteUser = async (id)=>{
     try {
+       const user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
        const response = await fetch(`http://localhost:5000/users/delete/${id}`,{
           method:"DELETE",
           headers:{
-            'content-type': 'application/json'
+            'content-type': 'application/json',
+            'x-user-role': user ? String(user.role) : ''
           },
         });
         const data = await response.json();
