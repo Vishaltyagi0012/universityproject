@@ -2,9 +2,6 @@
 import express from 'express';
 import adminController from '../backend/admin-controller.js';
 
-import adminMiddleware from './adminMiddleware.js';
-
-
 
 
 const router = express.Router();
@@ -18,5 +15,6 @@ router.get('/contacts/delete/:id',adminController.deleteContactById);
 
 router.get('/courses', adminController.getAllCourses);
 router.get('/courses/delete/:id', adminController.deleteCourseById);
+
 
 export default router;

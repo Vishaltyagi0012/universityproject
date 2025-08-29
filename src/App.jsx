@@ -22,7 +22,7 @@ import AdminLayout from "/src/components/layouts/Admin-Layout.jsx";
 import AdminUsers from '/src/components/layouts/Admin-Users.jsx';
 import AdminContacts from '/src/components/layouts/Admin-Contact.jsx';
 import AdminCourses from '/src/components/layouts/Admin-Courses.jsx';
-
+import CreateCourses from '/src/components/layouts/Create-Courses.jsx';
 
 
 
@@ -50,7 +50,7 @@ function App() {
             <Route path="users" element={<AdminUsers/>}/>
             <Route path="contacts" element={<AdminContacts/>}/>
             <Route path="courses" element={<AdminCourses/>}/>
-            
+            <Route path="update" element={<CreateCourses/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

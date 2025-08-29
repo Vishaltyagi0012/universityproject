@@ -27,7 +27,7 @@ const Contact = () => {
         result = await result.json()
         console.warn(result);
         localStorage.setItem("user", JSON.stringify(result));
-        navigate('/send');
+        navigate('/');
 
     }
     return (
@@ -101,7 +101,7 @@ const Contact = () => {
                             onChange={(e) => setAddress(e.target.value)}
                             placeholder="Address"
                         />
-                        <Link to="/send"> <button type="submit">Send Message</button></Link>
+                         <button type="submit">Send Message</button>
                     </form>
                 </div>
             </div>

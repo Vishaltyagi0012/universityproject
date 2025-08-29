@@ -60,9 +60,9 @@ app.post("/login", async (req, resp) => {
 
 
 
-app.post("/course",  async (req, resp) => {
-    let coursedata = new cour(req.body);
-    let result = await coursedata.save();
+app.post("/add",  async (req, resp) => {
+    let courses = new cour(req.body);
+    let result = await courses.save();
     resp.send(result);
 });
 
