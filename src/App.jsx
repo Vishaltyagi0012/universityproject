@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Home from './components/Navbar/home/Home';
@@ -29,7 +29,7 @@ import CreateCourses from '/src/components/layouts/Create-Courses.jsx';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/academics" element={<Academics />} />
@@ -53,7 +53,7 @@ function App() {
             <Route path="update" element={<CreateCourses/>}/>
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
