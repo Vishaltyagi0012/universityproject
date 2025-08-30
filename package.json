@@ -1,12 +1,12 @@
 {
   "name": "universityproject",
-  "homepage": "https://Vishaltyagi0012.github.io/universityproject",
+  "homepage": "https://Vishaltyagi0012/github.io/universityproject",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist",
     "start": "nodemon",
     "dev": "vite",
     "build": "vite build",
